@@ -1,11 +1,11 @@
 authors: Julian Pérez / Ivan De Gracia
-summary: Introduccion a LitElement. Primeros pasos
+summary: Primeros pasos con LitElement
 id: intro-curso-litelement
 categories: web
 tags: codelab,litelement
 status: Draft
 
-# Bienvenido
+# Primeros pasos con LitElement
 
 Este codelab está orientado a aprender a usar LitElement.
 LitElement es una clase base simple para crear componentes web que funcionan en cualquier navegador web de la actualidad.
@@ -52,8 +52,17 @@ cd curso-litelement
 npm init @open-wc
 ```
 
-![Image of Console](assets/creacion_proyecto_1.png)
+Este generador nos ayudará a crear la estructura (scaffolding) de una nueva aplicación o componente web.
+Para esta primera parte del codelab seleccionaremos la opción ``Scaffold a new project`` y ``Web component``. Llamaremos a nuestro Web component ``contact-info``
 
-Este generador nos ayudará a crear la estructura (scaffolding) de una nueva aplicación o componente web. Para esta formación seleccionaremos los siguientes apartados:
+![Image of Console](assets/primeros-pasos-1.png)
 
-![Image of Console](assets/creacion_proyecto_2.png)
+Una vez finalizada la instalación de las dependencias, deberíamos ver este mensaje por consola indicando que el proyecto se ha generado correctamente
+
+```console
+You are all set up now!
+
+All you need to do is run:
+  cd contact-info
+  npm run start
+```
