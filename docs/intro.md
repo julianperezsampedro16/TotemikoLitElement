@@ -66,3 +66,11 @@ All you need to do is run:
   cd contact-info
   npm run start
 ```
+
+Una vez generado el proyecto tendremos uan estructura de ficheros y directorios como esta:
+
+![Image of Console](assets/estructura-proyecto.png)
+
+Si lanzamos el servidor con `npm run start` se nos abrirá en nuestro navegador una página **index.html**. Si inspeccionamos el DOM del index.html generado observamos que se está renderizando una etiqueta html llamada `<contact-info>`, que es el nombre que habíamos elegido para nuestro componente.
+
+![Image of Console](assets/inspeccionar-componente.png)
