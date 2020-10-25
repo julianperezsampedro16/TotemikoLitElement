@@ -37,7 +37,7 @@ Duration: 01:00
 * Cualquier editor de texto ([Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), vim...)
 
 ## Creación del proyecto de desarrollo desde cero
-Duration: 03:00
+Duration: 05:00
 
 Primero, crearemos la carpeta de nuestro proyecto curso-litelement
 
