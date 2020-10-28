@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "my-agenda",
+      "description": "An application with a list of contacts with name and phone number",
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    }
+  ]
+}
