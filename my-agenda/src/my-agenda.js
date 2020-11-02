@@ -47,6 +47,7 @@ export class MyAgenda extends LitElement {
     return html `
       <main>
         <search-box></search-box>
+        <list-contact></list-contact>
         <add-contact-button></add-contact-button>
       </main>
 
