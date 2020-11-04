@@ -9,16 +9,19 @@ status: Draft
 
 Nuestro objetivo con esta formación es que aprendas todo lo necesario para que puedas empezar a desarrollar componentes usando LitElement.
 
-LitElement es una clase Javascript para crear componentes web que funcionen en cualquier navegador web.
+LitElement es una clase Javascript para crear componentes web (4.4Kb)
 
 LitElement usa la librería lit-html para renderizar en el *Shadow DOM* y agrega una API más *amigable* para administrar propiedades y atributos, estilos y eventos.Las propiedades se observan de forma predeterminada y los elementos se actualizan de forma asincrónica cuando cambian sus propiedades, optimizando el repintando de la página.
+
+Positive
+: Exiten otras muchas librerías para generar componentes web [Comparativa librerías](https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/)
 
 ## ¿Qué conocimientos previos deberías tener?
 
 Duration: 00:30
 
 * Conocimientos básicos sobre Javascript, HTML y CSS
-* Algo de experiencia con [WebComponents](https://developer.mozilla.org/es/docs/Web/Web_Components) y con [lit-html](https://lit-html.polymer-project.org/)
+* Algo de experiencia con [Web Components](https://developer.mozilla.org/es/docs/Web/Web_Components) y con [lit-html](https://lit-html.polymer-project.org/)
 * Algo de experiencia con [Node.js](https://nodejs.org/es/) y [npm](https://npmjs.org/)
 
 ## ¿Qué recursos necesitarás?
@@ -123,7 +126,7 @@ Para lanzar nuestra applicacion ejecutaremos:
   npm run start
 ```
 
-## Edición de los componentes del proyecto
+## Registro del componente web en el navegador
 
 Duration: 03:00
 
