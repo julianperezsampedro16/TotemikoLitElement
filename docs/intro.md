@@ -1,11 +1,11 @@
 authors: Julian Pérez / Ivan De Gracia
-summary: Primeros pasos trabajando con LitElement
+summary: Introducción
 id: intro
 categories: web
 tags: codelab,litelement
 status: Draft
 
-# Primeros pasos con LitElement
+# Introducción
 
 Nuestro objetivo con esta formación es que aprendas todo lo necesario para que puedas empezar a desarrollar componentes usando LitElement.
 
@@ -34,7 +34,14 @@ Duration: 01:00
 * Instalar el paquete npm de LitElement: ``npm i -g lit-element``
 * Cualquier editor de texto ([Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), vim...)
 
-## Creación del proyecto de desarrollo
+## ¿Qué aprenderás con esta formación?
+
+Duration: 01:00
+
+* Repaso los conceptos de Web Components
+* Utilidades de la clase LitElement
+
+## Creación de un proyecto de desarrollo
 
 Duration: 05:00
 
@@ -118,6 +125,8 @@ Para lanzar nuestra applicacion ejecutaremos
 ```
 
 ## Edición de los componentes del proyecto
+
+Duration: 03:00
 
 Si abrimos el fichero ``./src/MyApp.js`` observamos que nuestro componenente llamada `MyApp` extiende de la clase `LitElement`.
 
