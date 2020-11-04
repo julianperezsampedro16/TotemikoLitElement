@@ -11,7 +11,7 @@ Nuestro objetivo con esta formación es que aprendas todo lo necesario para que 
 
 LitElement es una clase Javascript para crear componentes web que funcionen en cualquier navegador web.
 
-LitElement usa lit-html para renderizar en el *Shadow DOM* y agrega una API para administrar propiedades y atributos. Las propiedades se observan de forma predeterminada y los elementos se actualizan de forma asincrónica cuando cambian sus propiedades.
+LitElement usa la librería lit-html para renderizar en el *Shadow DOM* y agrega una API más *amigable* para administrar propiedades y atributos, estilos y eventos.Las propiedades se observan de forma predeterminada y los elementos se actualizan de forma asincrónica cuando cambian sus propiedades, optimizando el repintando de la página.
 
 ## ¿Qué conocimientos previos deberías tener?
 
@@ -28,15 +28,14 @@ Duration: 01:00
 * Un ordenador con acceso a una terminal
 * Conexión a internet
 * Tener instalado [Node.js](https://nodejs.org/es/) (versión 10 o superior)
-* Instalar el paquete npm de LitElement: ``npm i -g lit-element``
 * Cualquier editor de texto ([Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), vim...)
 
 ## ¿Qué aprenderás con esta formación?
 
 Duration: 01:00
 
-* Repaso los conceptos de Web Components
-* Utilidades de la clase LitElement
+* Repaso a los conceptos de Web Components
+* Funciones de la clase LitElement
 
 ## Creación de un proyecto de desarrollo
 
@@ -114,7 +113,10 @@ Una vez finalizada la instalación de las dependencias, deberíamos ver este men
 You are all set up now!
 ```
 
-Para lanzar nuestra applicacion ejecutaremos
+Psitive:
+: Puedes abrir al archivo *package.json* para ver las dependencias instaladas; entre ellas encontrarás el paquete de **lit-html** y **lit-element**
+
+Para lanzar nuestra applicacion ejecutaremos:
 
 ```console
   cd my-app
@@ -125,7 +127,7 @@ Para lanzar nuestra applicacion ejecutaremos
 
 Duration: 03:00
 
-Si abrimos el fichero ``./src/MyApp.js`` observamos que nuestro componenente llamada `MyApp` extiende de la clase `LitElement`.
+Si abrimos el fichero ``./src/MyApp.js`` observamos que nuestro componenente llamado `MyApp` extiende de la clase `LitElement`.
 
 ```js
 import { html, css, LitElement } from 'lit-element';
@@ -135,14 +137,16 @@ export class MyApp extends LitElement {
 }
 ```
 
-Para que el navegador pueda entender lo que significa la etiqueta `my-app` nuestro componente debe estar registrado como un [*custom element*](https://developer.mozilla.org/es/docs/Web/Web_Components/Custom_Elements). Este registo se ha declarado en el fichero `./my-app.js`
+Al arrancar el servidor de nuestro proyecto, se abrírá en nuestro navegador una página **index.html**. Si inspeccionamos el DOM de la página generada veremos que se está renderizando una código HTML dentro de la etiqueta `<my-app>`.
+
+![Image of Console](assets/inspeccionar.png)
+
+Para que el navegador pueda entender lo que significa la etiqueta `my-app` nuestro componente está registrado como un [*custom element*](https://developer.mozilla.org/es/docs/Web/Web_Components/Custom_Elements). 
+
+Este registo se ha declarado en el fichero `./my-app.js` de nuestro proyecto.
 
 ```js
 import { MyApp } from './src/MyApp.js';
 
-window.customElements.define('my-app', MyApp);
+customElements.define('my-app', MyApp);
 ```
-
-Al arrancar el servidor de nuestro proyecto, se abrírá en nuestro navegador una página **index.html**. Si inspeccionamos el DOM de la página generada veremos que se está renderizando una código HTML dentro de la etiqueta `<my-app>` que corresponde con el componente que hemos registrado.
-
-![Image of Console](assets/inspeccionar.png)
