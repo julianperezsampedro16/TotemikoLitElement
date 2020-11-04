@@ -21,9 +21,6 @@ Duration: 00:30
 * Algo de experiencia con [WebComponents](https://developer.mozilla.org/es/docs/Web/Web_Components) y con [lit-html](https://lit-html.polymer-project.org/)
 * Algo de experiencia con [Node.js](https://nodejs.org/es/) y [npm](https://npmjs.org/)
 
-Positive
-: Lit-html nos permite escribir *templates* HTML en JavaScript utilizando *template strings*. Lit-html identifica las partes estáticas y dinámicas de las *templates* para que pueda actualizar de manera eficiente solo las partes modificadas del DOM.
-
 ## ¿Qué recursos necesitarás?
 
 Duration: 01:00

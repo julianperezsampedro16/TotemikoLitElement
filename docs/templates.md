@@ -25,10 +25,8 @@ Duration: 02:00
 El método `render` define una plantilla o código HTML que se renderizará como parte del componente.
 Mediante la función [html](https://lit-html.polymer-project.org/api/modules/lit_html.html#html) de `lit-html` se insertarán los elementos en el DOM.
 
-Positive
-: Solo las partes del DOM que cambian se renderizan nuevamente. Para conseguir esta optimización tu método render debería ser una función pura y siempre tendría que devolver la misma plantilla dadas las mismas propiedades. Esta función solo puede devolver algo que lit-html pueda devolver, por ejemplo un objeto *TemplateResult*. Evita antipatrones que actualicen el DOM fuera del método `render`.
-
-Para más información sobre la sintaxis de `lit-html` puedes consultar su [documentación](https://lit-html.polymer-project.org/guide/template-reference)
+Negative
+: Lit-html nos permite escribir *templates* HTML en JavaScript utilizando *template strings*. `Lit-html` identifica las partes estáticas y dinámicas de las *templates* para que pueda actualizar de manera eficiente solo las partes modificadas del DOM. Para más información sobre la sintaxis de `lit-html` puedes consultar su [documentación](https://lit-html.polymer-project.org/guide/template-reference)
 
 Abre el fichero `./my-app.js` y sustituye el código del método `render` por este:
 
@@ -39,6 +37,9 @@ Abre el fichero `./my-app.js` y sustituye el código del método `render` por es
     `;
   }
 ```
+
+Positive
+: Para conseguir la mejor optimización, tu función `render` debería ser una función pura y siempre tendría que devolver la misma plantilla dadas las mismas propiedades. Esta función solo puede devolver algo que `lit-html` pueda devolver, por ejemplo un objeto *TemplateResult*. Evita antipatrones que actualicen el DOM fuera del método `render`.
 
 ## Usando propiedades, condiciones y bucles en nuestra plantilla
 
