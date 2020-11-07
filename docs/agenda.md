@@ -1,6 +1,6 @@
 authors: Julian Pérez / Ivan De Gracia
 summary: Creación de Agenda de Contactos
-id: creacion-de-agenda-de-contactos
+id: agenda
 categories: web
 tags: codelab,litelement
 status: Draft
