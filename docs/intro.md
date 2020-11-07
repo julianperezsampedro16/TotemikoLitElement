@@ -16,6 +16,8 @@ LitElement usa la librería lit-html para renderizar en el *Shadow DOM* y agrega
 Positive
 : Exiten otras muchas librerías para generar componentes web [Comparativa librerías](https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/)
 
+Toda la documentación oficial de `LitElement` la podrás encontrar [aquí](https://lit-element.polymer-project.org/guide)
+
 ## ¿Qué conocimientos previos deberías tener?
 
 Duration: 00:30
@@ -58,7 +60,7 @@ npm init @open-wc
 ```
 
 Este generador que nos proporciona la comunidad [open-wc](https://open-wc.org/) nos ayudará a crear la estructura o *scaffolding* de una nueva aplicación o componente web.
-Para estos primero ejercicios seleccionaremos la opción ``Scaffold a new project`` y ``Aplication``.
+Para estos primeros ejercicios seleccionaremos la opción ``Scaffold a new project`` y ``Aplication``.
 
 Negative
 : El nombre de nuestro componente debe contener al menos un guión `-`
