@@ -1,11 +1,11 @@
 authors: Julian Pérez / Ivan De Gracia
-summary: Creación de Agenda de Contactos
+summary: Práctica final: creación de agenda de contactos
 id: agenda
 categories: web
 tags: codelab,litelement
 status: Draft
 
-# Práctica final: creación de una agenda de contactos
+# Creación de una agenda de contactos
 
 Este codelab está orientado a poner en práctica todos los conceptos que has ido aprendiendo, con el objetivo de crear una aplicación que sirva para gestionar una agenda de contactos.
 Para ello, crearemos los diferentes componentes que sean necesarios para construir el componente final, una `Agenda de Contactos`.
