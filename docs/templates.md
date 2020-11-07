@@ -28,7 +28,7 @@ Mediante la función [html](https://lit-html.polymer-project.org/api/modules/lit
 Negative
 : Lit-html nos permite escribir *templates* HTML en JavaScript utilizando *template strings*. `Lit-html` identifica las partes estáticas y dinámicas de las *templates* para que pueda actualizar de manera eficiente solo las partes modificadas del DOM. Para más información sobre la sintaxis de `lit-html` puedes consultar su [documentación](https://lit-html.polymer-project.org/guide/template-reference)
 
-Abre el fichero `./my-app.js` y sustituye el código del método `render` por este:
+Abre el fichero `./my-app.js` y sustituye el código del método `render` por este código:
 
 ```js
   render() {
@@ -77,26 +77,34 @@ Podemos iterar sobre un array, por ejemplo:
 Podemos consultar una condición lógica para renderizar diferentes mensajes, por ejemplo:
 
 ```js
+  constructor() {
+    super();
+    this.name = 'Nexter';
+  }
+
   render() {
     return html`
-      ${this.myBool?
-        html`<p>Hello!</p>`:
-        html`<p>Goodbye!</p>`}
+      ${this.name === 'Nexter'?
+        html`<p>Hello ${this.name}</p>`:
+        html`<p>Who are you, ${this.name}?</p>`}
     `;
   }
 ```
 
-## Vincular propiedades a elementos de la plantilla
+Negative
+: Cambia la propiedad *name* y observa como cambia el mensaje
+
+## Vincular propiedades a elementos de una plantilla
 
 Duration: 05:00
 
-Podemos insertar expresiones JavaScript como marcadores de posición para contenido de texto HTML, atributos, atributos booleanos, propiedades y manejadores de eventos.
+Podemos insertar expresiones de JavaScript como *placeholders* para texto, atributos, atributos booleanos, propiedades y manejadores de eventos de elementos HTML.
 
 Las expresiones de JavaScript pueden incluir las propiedades de su elemento. `LitElement` observa y reacciona a los cambios en dicha propiedad, por lo que las plantillas se actualizan automáticamente.
 
 El vínculo es siempre unidireccional *one way* (de padre a hijo). Para compartir datos entre un elemento padre y su hijo usaremos **eventos**.
 
-* Vincular una propiedad al contenido de un texto
+* Vincular una propiedad al texto de un elemento HTML
 
 ```js
   render() {
@@ -104,7 +112,7 @@ El vínculo es siempre unidireccional *one way* (de padre a hijo). Para comparti
   }
 ```
 
-* Vincular una propiedad a un atributo
+* Vincular una propiedad a un atributo HTML
 
 ```js
   render() {
@@ -113,7 +121,7 @@ El vínculo es siempre unidireccional *one way* (de padre a hijo). Para comparti
 ```
 
 Negative
-: Los valores de atributo son siempre *strings*, por lo que al *bindear* un atributo debe devolverse un valor que se pueda convertir en una cadena.
+: Los valores de un atributo son siempre *strings*, por lo que al vincularlo a un atributo debe devolverse un valor que se pueda convertir en una cadena.
 
 * Vincular una propiedad a un atributo booleano
 
@@ -188,6 +196,8 @@ Podemos asignar a un elemento hijo un `slot` específico. Para ello debemos asig
   }
 ```
 
+Inspecciona ahora el DOM, ¿qué elementos se muestran?
+
 ```html
 <my-app>
   <p slot="one">Include me in slot "one".</p>
@@ -200,7 +210,7 @@ Podemos asignar a un elemento hijo un `slot` específico. Para ello debemos asig
 
 Duration: 02:00
 
-Podemos componer plantillas de LitElement a partir de otras plantillas de LitElement.
+Podemos componer plantillas de `LitElement` a partir de otras plantillas de `LitElement`.
 
 ```js
 function headerTemplate(title) {
@@ -232,7 +242,7 @@ class MyApp extends LitElement {
 }
 ```
 
-También podemos componer plantillas importando otros elementos y usándolos en la plantilla que queremos
+También podemos componer plantillas importando otros componentes web de nuestra aplicación:
 
 ```js
 import './my-header.js';
